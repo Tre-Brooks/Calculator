@@ -62,12 +62,19 @@ public class Calculator implements ActionListener {
 	    
 	    for(int i = 0; i < 10; i++) {
 	    	number[i] = new JButton(String.valueOf(i));
+	    	number[i].addActionListener(this);
+	    	number[i].setFont(myfont);
+	    	number[i].setFocusable(false);
 	    	
 	    }
+	    
+	    delbut.setBounds(50, 430, 145, 50);
+	    clrbut.setBounds(205, 430, 145, 50);
 	  
 	    
 	    
-	    
+	    frame.add(delbut);
+	    frame.add(clrbut);
 		frame.add(textField);
 		
 		frame.setVisible(true);
