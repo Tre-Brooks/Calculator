@@ -70,9 +70,33 @@ public class Calculator implements ActionListener {
 	    
 	    delbut.setBounds(50, 430, 145, 50);
 	    clrbut.setBounds(205, 430, 145, 50);
+	    
+	    panel = new JPanel();
+	    panel.setBounds(50,100,300,300);
+	    panel.setLayout(new GridLayout(4,4, 10,10));
+	   
+	    panel.add(number[1]);
+	    panel.add(number[2]);
+	    panel.add(number[3]);
+	    panel.add(addbut);
+	    panel.add(number[4]);
+	    panel.add(number[5]);
+	    panel.add(number[6]);
+	    panel.add(subbut);
+	    panel.add(number[7]);
+	    panel.add(number[8]);
+	    panel.add(number[9]);
+	    panel.add(mulbut);
+	    panel.add(decbut);
+	    panel.add(number[0]);
+	    panel.add(equbut);
+	    panel.add(divbut);
+	    
+	    
+	    
 	  
 	    
-	    
+	    frame.add(panel);
 	    frame.add(delbut);
 	    frame.add(clrbut);
 		frame.add(textField);
