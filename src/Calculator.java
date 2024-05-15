@@ -113,8 +113,58 @@ public class Calculator implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		
+		for(int i = 0; i < 10; i++) {
+			if(e.getSource() == number[i]) {
+				textField.setText(textField.getText().concat(String.valueOf(i)));
+			}
+		}
+		
+		if( e.getSource() == decbut) {
+			textField.setText(textField.getText().concat("."));
+		}
+		if( e.getSource() == addbut) {
+			num1 = Double.parseDouble(textField.getText());
+			operator = '+';
+			textField.setText("");
+		}
+		if( e.getSource() == subbut) {
+			num1 = Double.parseDouble(textField.getText());
+			operator = '-';
+			textField.setText("");
+		}
+		if( e.getSource() == divbut) {
+			num1 = Double.parseDouble(textField.getText());
+			operator = '/';
+			textField.setText("");
+		}
+		if( e.getSource() == mulbut) {
+			num1 = Double.parseDouble(textField.getText());
+			operator = '*';
+			textField.setText("");
+		}
+		if(e.getSource() == equbut) {
+			num2 = Double.parseDouble(textField.getText());
+			
+			switch(operator) {
+			case '+':
+				result = num1 + num2;
+				break;
+				
+			case '-':
+				result = num1 - num2;
+				break;
+			case '*':
+				result = num1 * num2;
+				break;
+			case '/':
+				result = num1 / num2;
+				break;
+			}
+			
+			textField.setText(String.valueOf(result));
+			num1 = result;
+		}
 	}
 
 }
